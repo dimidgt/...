@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: monospace;
+            color: #fff;
+        }
+
+        .photos {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #111;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            outline: none;
+            width: 250px;
+            padding: 5px;
+            caret-color: transparent;
+        }
+
+        #result {
+            display: none;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            word-wrap: break-word;
+            max-width: 80%;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body onclick="document.getElementById('pass').focus()">
+
+    <div id="main-content">
+        <div class="photos">
+            <img src="https://media.discordapp.net/attachments/1083124260031185029/1477409128870580294/IMG_CDD0A179-B252-4123-AED0-7B0C6BF4B460.jpg?ex=69a4a7f9&is=69a35679&hm=0d0afd0304503a6417eb136c6664d6163c04a58099e76d87cc497b21f20bf6d1&=&format=webp&width=486&height=648" alt="">
+            <img src="https://media.discordapp.net/attachments/1083124260031185029/1477409578600890442/kalivan.png?ex=69a4a864&is=69a356e4&hm=a4643c7e9715d3bf5e64389bf6747bf9b8e365a42d18b209ee5505ff174e1306&=&format=webp&quality=lossless&width=565&height=648" alt="">
+        </div>
+
+        <div style="text-align: center;">
+            <input type="text" id="pass" autocomplete="off" autofocus>
+        </div>
+    </div>
+
+    <div id="result">
+        </div>
+
+    <script>
+     
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+// хуила выйди отсюда я твою мать ебал
+
+        const input = document.getElementById('pass');
+        const main = document.getElementById('main-content');
+        const result = document.getElementById('result');
+
+        const secretWord = 'anatoliy'; 
+        const fileUrl = 'https://drive.google.com/uc?export=download&id=1iQ8nzE4HGt6FK005J9Q6KdmowMCRWi5I';
+        const finalCipher = 'fnsnMSdgJ2MnXSdWfn0gfnsnYidRJ2MnaidaJ2YnYidgJ1MnXCdafn0gfnsnUydjJ2QnUSdTJ1onaidufn0gfnsnUydjJ1d+fSB+eydTfn0gfnsnUiddJ2AnXCdfJ2AnZH59IH57J2knZCdgfn0gfnsnUidtfn0gfnsnUidtJ10nYH59IH57J2EnYCdfJ3EnZCdfJ1YnVn59';
+
+        input.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const val = input.value.toLowerCase().trim();
+                
+                if (val === secretWord) {
+                    main.style.display = 'none';
+                    
+                    const link = document.createElement('a');
+                    link.href = fileUrl;
+                    link.download = ''; 
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+
+                    setTimeout(() => {
+                        result.innerText = finalCipher;
+                        result.style.display = 'block';
+                    }, 2000);
+
+                } else {
+
+                    document.body.innerHTML = '';
+                    window.close();
+                }
+            }
+        });
+
+        document.addEventListener('click', () => input.focus());
+    </script>
+
+</body>
+</html>
